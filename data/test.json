@@ -1,0 +1,33 @@
+[
+    {
+        "name": "John Doe",
+        "age": 63,
+        "isMarried": false,
+        "spouse": null,
+        "children": [
+            {
+                "name": "Sylvia Doe",
+                "age": 2
+            },
+            {
+                "name": "Ben Doe",
+                "age": 5
+            }
+        ]
+    },
+    {
+        "name": "Dude",
+        "age": 11
+    },
+    {
+        "name": "Fidel Castro",
+        "age": 132,
+        "isMarried": true,
+        "spouse": {
+            "name": "Fidelina Castrina",
+            "age": 198
+        },
+        "children": [],
+        "data": "{\"test\": \"{\\\"nested\\\": true}\"}"
+    }
+]
