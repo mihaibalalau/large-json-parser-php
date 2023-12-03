@@ -6,10 +6,13 @@ use Generator;
 
 class LargeJsonFileIterator
 {
+    private JsonFileArrayParser $jsonFileArrayParser;
+
     public function __construct(
-        private JsonFileArrayParser $jsonFileArrayParser,
+        string $filePath,
         private int $maxItemLength = 1024 * 1000 // 1MB
     ) {
+        $this->jsonFileArrayParser = new JsonFileArrayParser(new FileHandler($filePath));
     }
 
     /**
