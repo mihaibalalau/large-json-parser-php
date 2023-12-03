@@ -1,0 +1,15 @@
+{
+    "name": "mihaibalalau/large-json-parser",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Mihaib\\LargeJsonParser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mihai Balalau"
+        }
+    ],
+    "require": {}
+}
