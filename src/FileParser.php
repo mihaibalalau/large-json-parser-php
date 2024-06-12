@@ -25,7 +25,7 @@ class FileParser
         $this->previousCharacter = $this->currentCharacter;
         $this->currentCharacter = $this->nextCharacter;
 
-        if ($this->fileHandler->isEndOfFile()) {
+        if ($this->isEof()) {
             $this->nextCharacter = false;
         } else {
             $this->nextCharacter = $this->fileHandler->getChar();
@@ -52,8 +52,8 @@ class FileParser
         return $this->currentCharacter === $char;
     }
 
-    public function isLastCharacter(): bool
+    public function isEof(): bool
     {
-        return $this->fileHandler->isEndOfFile() && $this->nextCharacter === false;
+        return $this->fileHandler->isEndOfFile();
     }
 }

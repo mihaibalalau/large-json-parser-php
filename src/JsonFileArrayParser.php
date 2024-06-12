@@ -22,10 +22,6 @@ class JsonFileArrayParser extends JsonFileParser
         $this->skipWhitespace();
         $this->skipComma();
 
-        if ($this->isEndOfJson()) {
-            return null;
-        }
-
         $item = new JsonItem();
 
         do {
@@ -46,6 +42,10 @@ class JsonFileArrayParser extends JsonFileParser
                 $this->step();
             }
         } while ($this->nestLevel > 0);
+
+        if ($this->nestLevel === -1) {
+            return null;
+        }
 
         $this->nestLevel = 0;
 

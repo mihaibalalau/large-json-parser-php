@@ -16,12 +16,6 @@ abstract class JsonFileParser extends FileParser
 
     abstract protected function init(): void;
 
-
-    public function isEndOfJson(): bool
-    {
-        return $this->isLastCharacter() && $this->isClosingEntity();
-    }
-
     public function isClosingEntity(): bool
     {
         $charMatches = $this->isCurrentCharacter(']') || $this->isCurrentCharacter('}');
